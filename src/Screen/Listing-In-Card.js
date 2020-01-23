@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { Card, Image } from 'react-native-elements';
 
 export default function ListingInCard() {
@@ -44,50 +44,26 @@ export default function ListingInCard() {
             name: 'Dhaval',
             avatar: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png'
          },
-         {
-            name: 'Dhaval',
-            avatar: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png'
-         },
-         {
-            name: 'Dhaval',
-            avatar: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png'
-         },
-         {
-            name: 'Dhaval',
-            avatar: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png'
-         },
-         {
-            name: 'Dhaval',
-            avatar: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png'
-         },
-         {
-            name: 'Dhaval',
-            avatar: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png'
-         },
-         {
-            name: 'Dhaval',
-            avatar: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png'
-         },
     ]
     return(
     <View style={style.container}>
         <Card 
             title="Listing With Card"
             containerStyle= {{
-                width: '100%'
+                width: '100%',
             }}
         >
              {
                 users.map((u, i) => {
                 return (
-                    <View key={i} style={style.user}>
-                    <Image
-                        source={{ uri: u.avatar }}
-                        style={{ width: 25, height: 25, radius: '50%' }}
-                        resizeMode="cover"
-                    />
-                    <Text style={style.name}>{u.name}</Text>
-                    </View>
+                     <View key={i} style={style.user}>
+                     <Image
+                           source={{ uri: u.avatar }}
+                           style={{ width: 25, height: 25, radius: '50%' }}
+                           resizeMode="cover"
+                     />
+                     <Text style={style.name}>{u.name}</Text>
+                     </View>
                 );
                 })
             }
@@ -106,7 +82,10 @@ const style = StyleSheet.create({
     user: {
         flexDirection: 'row',
         alignItems: 'center',
-        marginTop: 15
+      //   marginTop: 15,
+        padding: 15,
+        borderBottomColor: 'gray',
+        borderBottomWidth: 1
     },
     name: {
         marginLeft: 20,
