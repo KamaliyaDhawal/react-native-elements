@@ -8,6 +8,7 @@ import Button from '../Screen/Button';
 import ButtonGroup from '../Screen/ButtonGroup';
 import Card from '../Screen/Card';
 import CardListing from '../Screen/Listing-In-Card';
+import CheckBox from '../Screen/CheckBox';
 
 const screen = {
     Avatar: {
@@ -27,6 +28,9 @@ const screen = {
     },
     CardListing: {
         screen: CardListing
+    },
+    CheckBox: {
+        screen: CheckBox
     },
 }
 
